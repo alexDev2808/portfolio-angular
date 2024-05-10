@@ -9,12 +9,17 @@
   left: 0;
   justify-content: center;
   align-items: center;
-  font-size: 96px;
-  color: white;
   opacity: 0.8;
   user-select: none;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
 
+.text-container h1 {
+  font-size: 3.8rem;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+
+  animation: titleh1 3s ease 0s 1 normal forwards;
 }
 
 :host {
@@ -28,6 +33,18 @@
   --color-interactive: 140, 100, 255;
   --circle-size: 80%;
   --blending: hard-light;
+}
+
+@keyframes titleh1 {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px) rotate(-200deg);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0) rotate(0deg);
+	}
 }
 
 @keyframes moveInCircle {
